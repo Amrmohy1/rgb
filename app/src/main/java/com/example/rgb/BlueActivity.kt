@@ -21,8 +21,8 @@ class BlueActivity : AppCompatActivity() {
         val startBtn: Button=findViewById(R.id.start_btn)
         startBtn.setOnClickListener {
             val intent= Intent(this, MainActivity::class.java)
-
             startActivity(intent)
+            finishAffinity()
         }
     }
 }
