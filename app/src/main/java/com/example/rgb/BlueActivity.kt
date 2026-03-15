@@ -1,6 +1,8 @@
 package com.example.rgb
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,12 @@ class BlueActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val startBtn: Button=findViewById(R.id.start_btn)
+        startBtn.setOnClickListener {
+            val intent= Intent(this, MainActivity::class.java)
+
+            startActivity(intent)
         }
     }
 }
